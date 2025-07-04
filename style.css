@@ -85,3 +85,30 @@ header {
   vertical-align: middle;
 }
 
+/* 画像ボタンのふわっと拡大 */
+.image-link {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  display: block;
+  max-width: 100%;
+  margin: 12px 0;
+}
+
+.image-link:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* SNSアイコンのふわっと拡大 */
+.sns-icons a img {
+  width: 30px;
+  height: 30px;
+  margin: 0 8px;
+  transition: transform 0.2s ease;
+  filter: brightness(0) invert(0); /* シルエット化 */
+}
+
+.sns-icons a img:hover {
+  transform: scale(1.2);
+  opacity: 0.9;
+}
