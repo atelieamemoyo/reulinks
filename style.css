@@ -80,10 +80,10 @@ body {
   transform: rotate(-0.8deg);
 }
 
-/* 仮のマスキングテープ画像 */
+/* マスキングテープ画像 */
 .section::before {
   content: "";
-  background: url("https://i.imgur.com/V7rW9EX.png") no-repeat center;
+  background: url("linktree/IMG_9357.png") no-repeat center;
   background-size: contain;
   width: 100px;
   height: 40px;
@@ -97,7 +97,7 @@ body {
 /* 仮のクリップ画像（右上） */
 .section::after {
   content: "";
-  background: url("https://i.imgur.com/z2QWQzY.png") no-repeat center;
+  background: url("linktree/IMG_9356.png") no-repeat center;
   background-size: contain;
   width: 32px;
   height: 32px;
