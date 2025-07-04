@@ -1,4 +1,4 @@
- body {
+    body {
       font-family: 'Kiwi Maru', serif;
       background-image: url("linktree/okumono_enogu12.png");
       background-size: cover;
@@ -21,6 +21,7 @@
       border-radius: 12px;
       padding: 20px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      position: relative;
     }
 
     .main-icon {
@@ -58,12 +59,20 @@
     }
 
     .section {
-      background: white;
+      background: #fffef8 url('https://cdn.pixabay.com/photo/2015/05/03/09/52/paper-751847_1280.jpg') repeat;
       border-radius: 14px;
       padding: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
       position: relative;
-      clip-path: polygon(0% 0%, 100% 5%, 100% 95%, 0% 100%); /* 紙がちぎれたような端 */
+      transform: rotate(-1deg);
+    }
+
+    .section:nth-of-type(2) {
+      transform: rotate(1.5deg);
+    }
+
+    .section:nth-of-type(3) {
+      transform: rotate(-0.8deg);
     }
 
     .section::before {
@@ -73,27 +82,21 @@
       width: 80px;
       height: 40px;
       position: absolute;
-      top: -10px;
+      top: -20px;
       left: 20px;
       transform: rotate(-5deg);
     }
 
-    .section:nth-of-type(2)::before {
-      left: auto;
-      right: 30px;
-      transform: rotate(8deg);
-    }
-
-    .section:nth-of-type(3)::before {
-      left: 50%;
-      transform: translateX(-50%) rotate(-2deg);
-    }
-
     .section::after {
-      content: url("https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Arrow_right_handdrawn.svg/32px-Arrow_right_handdrawn.svg.png");
+      content: "";
+      background: url("https://cdn.pixabay.com/photo/2016/11/30/15/08/pushpin-1875229_960_720.png") no-repeat;
+      background-size: contain;
+      width: 32px;
+      height: 32px;
       position: absolute;
-      bottom: -20px;
-      right: 20px;
+      top: -16px;
+      right: 16px;
+      transform: rotate(3deg);
     }
 
     .section h2 {
@@ -150,8 +153,3 @@
       color: #777;
       margin-top: 40px;
     }
-  </style>
-.sns-icons a img:hover {
-  transform: scale(1.2);
-  opacity: 0.9;
-}
