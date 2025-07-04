@@ -1,5 +1,9 @@
-    body {
-      font-family: 'Kiwi Maru', serif;
+    /* Font指定 */@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Kosugi+Maru&display=swap');.editor,
+
+body {
+      font-family: "DotGothic16", sans-serif;
+      font-weight: 400;
+      font-style: normal;
       background-image: url("linktree/IMG_9355.png");
       background-size: cover;
       background-repeat: no-repeat;
