@@ -1,21 +1,22 @@
-    /* Font指定 */@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Kosugi+Maru&display=swap');.editor,
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
 
 body {
-      font-family: "DotGothic16", sans-serif;
-      font-weight: 400;
-      font-style: normal;
-      background-image: url("linktree/IMG_9355.png");
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-attachment: fixed;
-      color: #333;
-      padding: 20px;
-      line-height: 1.6;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 20px;
-    }
+  font-family: "DotGothic16", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-image: url("linktree/IMG_9355.png"); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  color: #333;
+  padding: 20px;
+  line-height: 1.6;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
 
     header {
       grid-column: 1 / -1;
@@ -79,17 +80,26 @@ body {
       transform: rotate(-0.8deg);
     }
 
-    .section::before {
-      content: "";
-      background: url("https://cdn.pixabay.com/photo/2017/08/30/03/57/masking-tape-2690867_960_720.png") no-repeat;
-      background-size: contain;
-      width: 80px;
-      height: 40px;
-      position: absolute;
-      top: -20px;
-      left: 20px;
-      transform: rotate(-5deg);
-    }
+.section::before {
+  content: "";
+  background: url("https://i.imgur.com/pWtHmJj.png") no-repeat center;
+  background-size: contain;
+  width: 100px;
+  height: 40px;
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  transform: rotate(-5deg);
+  z-index: 2;
+}
+
+.section:nth-of-type(2)::before {
+  background-image: url("https://i.imgur.com/rIjwjzg.png");
+  left: auto;
+  right: 20px;
+  transform: rotate(6deg);
+}
+
 
     .section::after {
       content: "";
