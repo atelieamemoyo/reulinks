@@ -63,26 +63,27 @@ body {
       opacity: 0.9;
     }
 
-    .section {
-      background: #fffef8 url('https://cdn.pixabay.com/photo/2015/05/03/09/52/paper-751847_1280.jpg') repeat;
-      border-radius: 14px;
-      padding: 20px;
-      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-      position: relative;
-      transform: rotate(-1deg);
-    }
+.section {
+  background: #fffef8 url('https://cdn.pixabay.com/photo/2015/05/03/09/52/paper-751847_1280.jpg') repeat;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+  position: relative;
+  transform: rotate(-1deg);
+  border: 2px dashed #ddd; /* ← ステッチ風の点線枠 */
+}
 
-    .section:nth-of-type(2) {
-      transform: rotate(1.5deg);
-    }
+.section:nth-of-type(2) {
+  transform: rotate(1.5deg);
+}
+.section:nth-of-type(3) {
+  transform: rotate(-0.8deg);
+}
 
-    .section:nth-of-type(3) {
-      transform: rotate(-0.8deg);
-    }
-
+/* 仮のマスキングテープ画像 */
 .section::before {
   content: "";
-  background: url("linktree/IMG_9356.png") no-repeat center;
+  background: url("https://i.imgur.com/V7rW9EX.png") no-repeat center;
   background-size: contain;
   width: 100px;
   height: 40px;
@@ -93,25 +94,35 @@ body {
   z-index: 2;
 }
 
-.section:nth-of-type(2)::before {
-  background-image: url("linktree/IMG_9357.png");
-  left: auto;
-  right: 20px;
-  transform: rotate(6deg);
+/* 仮のクリップ画像（右上） */
+.section::after {
+  content: "";
+  background: url("https://i.imgur.com/z2QWQzY.png") no-repeat center;
+  background-size: contain;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: -16px;
+  right: 16px;
+  transform: rotate(8deg);
+  z-index: 3;
 }
 
-
-    .section::after {
-      content: "";
-      background: url("https://cdn.pixabay.com/photo/2016/11/30/15/08/pushpin-1875229_960_720.png") no-repeat;
-      background-size: contain;
-      width: 32px;
-      height: 32px;
-      position: absolute;
-      top: -16px;
-      right: 16px;
-      transform: rotate(3deg);
-    }
+/* 押しピン画像は任意で左上に追加したい場合 */
+.section.pin {
+  position: relative;
+}
+.section.pin::after {
+  content: "";
+  background: url("https://i.imgur.com/BwrT3Bj.png") no-repeat center;
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: -18px;
+  left: 10px;
+  transform: rotate(3deg);
+}
 
     .section h2 {
       border-left: 5px solid #b3e0f7;
