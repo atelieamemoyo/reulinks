@@ -82,7 +82,7 @@ body {
 
 .section::before {
   content: "";
-  background: url("https://imgur.com/pWtHmJj") no-repeat center;
+  background: url("linktree/IMG_9356.png") no-repeat center;
   background-size: contain;
   width: 100px;
   height: 40px;
@@ -94,7 +94,7 @@ body {
 }
 
 .section:nth-of-type(2)::before {
-  background-image: url("https://imgur.com/rIjwjzg");
+  background-image: url("linktree/IMG_9357.png");
   left: auto;
   right: 20px;
   transform: rotate(6deg);
