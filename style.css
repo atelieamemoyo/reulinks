@@ -63,6 +63,15 @@ body {
       opacity: 0.9;
     }
 
+　　.sns-icons {
+  fill: #91C8E4;
+  transition: fill 0.3s ease;
+}
+.sns-icons:hover {
+  fill: #749BC2;
+}
+
+
 .section {
   background: #fffef8 url('https://cdn.pixabay.com/photo/2015/05/03/09/52/paper-751847_1280.jpg') repeat;
   border-radius: 14px;
