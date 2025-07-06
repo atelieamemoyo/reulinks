@@ -149,10 +149,16 @@ body {
 }
 
 .sticker-button {
-  width: 180px;
+  width: 40%;
   position: relative;
   transition: transform 0.3s ease;
   filter: drop-shadow(4px 4px 8px rgba(0,0,0,0.3));
+}
+
+.sticker-button img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .sticker-button:nth-child(odd) {
