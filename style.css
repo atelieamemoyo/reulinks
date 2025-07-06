@@ -92,10 +92,10 @@ body {
 /* マスキングテープ画像 */
 .section::before {
   content: "";
-  background: url("linktree/IMG_9356.png") no-repeat center;
+  background: url("linktree/IMG_9357.png") no-repeat center;
   background-size: contain;
-  width: 100px;
-  height: 40px;
+  width: 200px;
+  height: 80px;
   position: absolute;
   top: -20px;
   left: 20px;
@@ -108,8 +108,8 @@ body {
   content: "";
   background: url("linktree/crip01.png") no-repeat center;
   background-size: contain;
-  width: 32px;
-  height: 32px;
+  width: 64px;
+  height: 64px;
   position: absolute;
   top: -16px;
   right: 16px;
@@ -125,8 +125,8 @@ body {
   content: "";
   background: url("linktree/pin01.png") no-repeat center;
   background-size: contain;
-  width: 30px;
-  height: 30px;
+  width: 60px;
+  height: 60px;
   position: absolute;
   top: -18px;
   left: 10px;
@@ -140,19 +140,61 @@ body {
       color: 4682A9;
     }
 
-    .image-link {
-      width: 100%;
-      border-radius: 8px;
-      margin: 10px 0;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      display: block;
-      max-width: 100%;
+
+.sticker-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      max-width: 900px;
     }
 
-    .image-link:hover {
-      transform: scale(1.03);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    .sticker-button {
+      display: inline-block;
+      position: relative;
+      width: 140px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      transform-origin: center;
     }
+
+    .sticker-button img {
+      width: 100%;
+      display: block;
+      border-radius: 12px;
+      box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .sticker-button:hover {
+      transform: scale(1.05);
+    }
+
+    .sticker-button:active {
+      animation: peelOff 0.5s ease forwards;
+    }
+
+    @keyframes peelOff {
+      0% {
+        transform: rotate(0deg) scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: rotate(10deg) scale(1.1);
+        opacity: 0.8;
+      }
+      100% {
+        transform: rotate(-60deg) translateY(-200px);
+        opacity: 0;
+      }
+    }
+
+    /* ランダム風配置 */
+    .left { align-self: flex-start; transform: rotate(-4deg); }
+    .right { align-self: flex-end; transform: rotate(3deg); }
+    .center { align-self: center; transform: rotate(-2deg); }
+    .angle1 { transform: rotate(2deg); }
+    .angle2 { transform: rotate(-3deg); }
+    .angle3 { transform: rotate(5deg); }
 
     .description {
       font-size: 14px;
