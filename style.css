@@ -140,7 +140,7 @@ body {
       color: 4682A9;
     }
 
-
+/* ステッカー風リンクボタン */
 .sticker-container {
       display: flex;
       flex-wrap: wrap;
@@ -159,7 +159,8 @@ body {
     }
 
     .sticker-button img {
-      width: 100%;
+      width: 180px;
+      height: auto;
       display: block;
       border-radius: 12px;
       box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2);
